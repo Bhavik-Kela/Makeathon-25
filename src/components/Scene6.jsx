@@ -84,7 +84,7 @@ export default function Scene6() {
             <motion.div whileHover={{ y: -10 }} className="text-center">
               <Mail size={60} className="mx-auto mb-4 text-[#ffb347]" strokeWidth={1.5} />
               <div className="text-2xl font-bold text-[#d2c7a3] mb-2">Contact</div>
-              <div className="text-3xl text-[#ffb347] font-bold">acmw.students@srmist.edu.in</div>
+              <div className="text-2xl text-[#ffb347] font-bold">acmw.students@srmist.edu.in</div>
               <div className="text-lg text-[#d2c7a3]/70 mt-2">Student Chapter</div>
             </motion.div>
           </motion.div>
@@ -97,10 +97,10 @@ export default function Scene6() {
             viewport={{ once: true }}
             className="text-center"
           >
-           <motion.button
+          <motion.button
   whileHover={{ scale: 1.1, boxShadow: '0 0 80px #4B5320' }}
   whileTap={{ scale: 0.95 }}
-  className="group relative px-20 py-8 text-3xl font-bold text-white bg-[#1DB954] rounded-full overflow-hidden transition-all duration-300"
+  className="group relative px-16 py-6 sm:px-20 sm:py-8 text-2xl sm:text-3xl font-bold text-white bg-[#1DB954] rounded-full overflow-hidden transition-all duration-300"
   style={{ boxShadow: '0 0 40px #4B5320' }}
 >
   <motion.div
@@ -111,8 +111,8 @@ export default function Scene6() {
   <span className="relative z-10 flex items-center justify-center gap-4">
     REGISTER NOW
     <ArrowRight
-      size={36}
-      className="group-hover:translate-x-3 transition-transform duration-300"
+      size={28} // smaller on mobile
+      className="group-hover:translate-x-2 sm:group-hover:translate-x-3 transition-transform duration-300"
     />
   </span>
 </motion.button>
