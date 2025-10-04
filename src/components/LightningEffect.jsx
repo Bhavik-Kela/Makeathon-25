@@ -18,7 +18,7 @@ export default function LightningEffect() {
       return Math.random() * (max - min) + min;
     };
 
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId;
 
     const scheduleLightning = () => {
       timeoutId = setTimeout(() => {

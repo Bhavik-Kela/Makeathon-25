@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 
 export default function RainEffect() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -13,7 +13,7 @@ export default function RainEffect() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-  const raindrops = [];
+    const raindrops = [];
 
     for (let i = 0; i < 200; i++) {
       raindrops.push({

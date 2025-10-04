@@ -7,7 +7,7 @@ const zones = [
     name: 'MedZone',
     icon: Heart,
     description: 'Combat infections, create low-resource medical devices, and develop zombie detection systems to protect survivors.',
-    bg: 'https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    bg: 'https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1920&q=80',
     color: '#b33a3a',
     gradient: 'from-red-900/80 to-black/80'
   },
@@ -15,7 +15,7 @@ const zones = [
     name: 'ShieldZone',
     icon: Shield,
     description: 'Design secure shelters, develop encryption systems, and create surveillance technology to keep communities safe.',
-    bg: 'https://images.pexels.com/photos/1118869/pexels-photo-1118869.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    bg: 'https://images.unsplash.com/photo-1518155317743-a8381ed3e766?w=1920&q=80',
     color: '#4a5568',
     gradient: 'from-gray-800/80 to-black/80'
   },
@@ -23,7 +23,7 @@ const zones = [
     name: 'ForgeZone',
     icon: Wrench,
     description: 'Build survival robots, engineer tools from scrap, and innovate mechanical solutions for the new world.',
-    bg: 'https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    bg: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1920&q=80',
     color: '#d97706',
     gradient: 'from-orange-800/80 to-black/80'
   },
@@ -31,7 +31,7 @@ const zones = [
     name: 'GreenZone',
     icon: Leaf,
     description: 'Develop sustainable agriculture, purify water sources, and create renewable energy systems for survival.',
-    bg: 'https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    bg: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1920&q=80',
     color: '#059669',
     gradient: 'from-green-800/80 to-black/80'
   },
@@ -39,14 +39,14 @@ const zones = [
     name: 'SafeZone',
     icon: Home,
     description: 'Establish communication networks, coordinate rescue missions, and build infrastructure for human connection.',
-    bg: 'https://images.pexels.com/photos/704971/pexels-photo-704971.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    bg: 'https://images.unsplash.com/photo-1533093818801-dbfe0a313e72?w=1920&q=80',
     color: '#ffb347',
     gradient: 'from-amber-800/80 to-black/80'
   }
 ];
 
 export default function Scene2() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start end', 'end start']

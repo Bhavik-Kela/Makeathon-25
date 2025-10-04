@@ -1,12 +1,8 @@
-import { useEffect, ReactNode } from 'react';
+import { useEffect } from 'react';
 
-interface SmoothScrollProps {
-  children: ReactNode;
-}
-
-export default function SmoothScroll({ children }: SmoothScrollProps) {
+export default function SmoothScroll({ children }) {
   useEffect(() => {
-    let rafId: number;
+    let rafId;
     let currentScroll = window.scrollY;
     let targetScroll = window.scrollY;
 
@@ -25,7 +21,7 @@ export default function SmoothScroll({ children }: SmoothScrollProps) {
       targetScroll = window.scrollY;
     };
 
-    const handleWheel = (e: WheelEvent) => {
+    const handleWheel = (e) => {
       e.preventDefault();
       targetScroll += e.deltaY * 0.5;
       targetScroll = Math.max(0, Math.min(targetScroll, document.body.scrollHeight - window.innerHeight));

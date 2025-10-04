@@ -5,20 +5,25 @@ export default function FlashlightCursor() {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    let rafId: number;
+    let rafId;
     let targetX = 0;
     let targetY = 0;
     let currentX = 0;
     let currentY = 0;
 
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e) => {
       targetX = e.clientX;
       targetY = e.clientY;
     };
 
-    const handleMouseOver = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (target.tagName === 'BUTTON' || target.tagName === 'A' || target.closest('button') || target.closest('a')) {
+    const handleMouseOver = (e) => {
+      const target = e.target;
+      if (
+        target.tagName === 'BUTTON' ||
+        target.tagName === 'A' ||
+        target.closest('button') ||
+        target.closest('a')
+      ) {
         setIsActive(true);
       } else {
         setIsActive(false);
@@ -48,7 +53,7 @@ export default function FlashlightCursor() {
     <div
       className={`flashlight ${isActive ? 'active' : ''}`}
       style={{
-        transform: `translate(${position.x - 150}px, ${position.y - 150}px)`
+        transform: `translate(${position.x - 150}px, ${position.y - 150}px)`,
       }}
     />
   );

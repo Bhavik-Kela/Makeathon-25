@@ -16,7 +16,7 @@ export default function Scene1() {
       <div
         className="parallax-bg"
         style={{
-          backgroundImage: 'url(https://images.pexels.com/photos/161798/nuclear-plant-science-nuclear-power-161798.jpeg?auto=compress&cs=tinysrgb&w=1920)',
+          backgroundImage: 'url(https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1920&q=80)',
           opacity: 0.4,
         }}
       />

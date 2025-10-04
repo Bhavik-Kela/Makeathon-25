@@ -9,20 +9,25 @@ import Scene4 from './components/Scene4';
 import Scene5 from './components/Scene5';
 import Scene6 from './components/Scene6';
 
+
 function App() {
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY;
-      const parallaxElements = document.querySelectorAll('.parallax-bg');
+      const parallaxElements = document.querySelectorAll(".parallax-bg");
 
       parallaxElements.forEach((element) => {
         const speed = 0.5;
         const yPos = -(scrolled * speed);
-        (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
+
+        // JS version: remove TypeScript syntax
+        if (element instanceof HTMLElement) {
+          element.style.transform = `translateY(${yPos}px)`;
+        }
       });
     };
 
-    let rafId: number;
+    let rafId;
     const onScroll = () => {
       rafId = requestAnimationFrame(handleScroll);
     };

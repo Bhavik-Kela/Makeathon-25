@@ -7,7 +7,7 @@ export default function Scene6() {
       <div
         className="parallax-bg"
         style={{
-          backgroundImage: 'url(https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1920)',
+          backgroundImage: 'url(https://images.unsplash.com/photo-1477346611705-65d1883cee1e?w=1920&q=80)',
           opacity: 0.3,
         }}
       />

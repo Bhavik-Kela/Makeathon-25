@@ -70,7 +70,7 @@ const timelineEvents = [
 ];
 
 export default function Scene4() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start end', 'end start']
@@ -83,7 +83,7 @@ export default function Scene4() {
       <div
         className="parallax-bg"
         style={{
-          backgroundImage: 'url(https://images.pexels.com/photos/4050347/pexels-photo-4050347.jpeg?auto=compress&cs=tinysrgb&w=1920)',
+          backgroundImage: 'url(https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=1920&q=80)',
           opacity: 0.15,
         }}
       />
