@@ -3,8 +3,11 @@ import { useEffect, useState } from 'react';
 export default function FlashlightCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isActive, setIsActive] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+    
     let rafId;
     let targetX = 0;
     let targetY = 0;
@@ -48,6 +51,8 @@ export default function FlashlightCursor() {
       cancelAnimationFrame(rafId);
     };
   }, []);
+
+  if (isMobile) return null;
 
   return (
     <div

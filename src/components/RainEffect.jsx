@@ -10,12 +10,17 @@ export default function RainEffect() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const updateSize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    updateSize();
 
     const raindrops = [];
+    const dropCount = window.innerWidth < 768 ? 100 : 200;
 
-    for (let i = 0; i < 200; i++) {
+    for (let i = 0; i < dropCount; i++) {
       raindrops.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -52,8 +57,7 @@ export default function RainEffect() {
     animate();
 
     const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      updateSize();
     };
 
     window.addEventListener('resize', handleResize);
@@ -67,8 +71,13 @@ export default function RainEffect() {
   return (
     <canvas
       ref={canvasRef}
-      className="rain-container"
-      style={{ position: 'fixed', top: 0, left: 0, pointerEvents: 'none', zIndex: 40 }}
+      style={{ 
+        position: 'fixed', 
+        top: 0, 
+        left: 0, 
+        pointerEvents: 'none', 
+        zIndex: 40 
+      }}
     />
   );
 }

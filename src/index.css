@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,17 +15,16 @@ body {
   background: #0f0f0f;
   color: #d2c7a3;
   overflow-x: hidden;
-  cursor: none;
+}
+
+@media (min-width: 768px) {
+  body {
+    cursor: none;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Creepster', cursive;
-}
-
-.scene {
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
 }
 
 .vignette {
@@ -93,30 +92,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.rain-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 40;
-  overflow: hidden;
-}
-
-.raindrop {
-  position: absolute;
-  width: 1px;
-  background: linear-gradient(to bottom, transparent, rgba(174, 194, 224, 0.5));
-  animation: rain-fall linear infinite;
-}
-
-@keyframes rain-fall {
-  to {
-    transform: translateY(100vh);
-  }
-}
-
 .fog-overlay {
   position: fixed;
   top: 0;
@@ -143,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 179, 71, 0.4) 0%, transparent 70%);
+  background: radial-gradient(circle, rgb(249, 245, 245) 0%, transparent 70%);
   pointer-events: none;
   z-index: 100;
   mix-blend-mode: screen;
@@ -155,15 +130,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 350px;
   height: 350px;
   background: radial-gradient(circle, rgba(255, 179, 71, 0.6) 0%, transparent 70%);
-}
-
-.timeline-line {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  background: linear-gradient(to bottom, #ffb347, #b33a3a);
-  box-shadow: 0 0 10px #ffb347;
 }
 
 .xp-orb {
@@ -239,17 +205,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.parallax-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  will-change: transform;
-}
-
 .bloom {
   filter: blur(1px) brightness(1.1) contrast(1.1);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .flashlight {
+    display: none;
+  }
 }
