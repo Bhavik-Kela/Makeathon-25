@@ -8,6 +8,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+  user-select: none;         /* Standard */
+
+
 }
 
 body {
@@ -118,7 +125,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgb(249, 245, 245) 0%, transparent 70%);
+  background: radial-gradient(circle, rgb(88, 86, 86) 0%, transparent 70%);
   pointer-events: none;
   z-index: 100;
   mix-blend-mode: screen;

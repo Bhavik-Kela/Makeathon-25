@@ -66,7 +66,7 @@ export default function Scene6() {
             <motion.div whileHover={{ y: -10 }} className="text-center">
               <Calendar size={60} className="mx-auto mb-4 text-[#ffb347]" strokeWidth={1.5} />
               <div className="text-2xl font-bold text-[#d2c7a3] mb-2">When</div>
-              <div className="text-3xl text-[#ffb347] font-bold">48 Hours</div>
+              <div className="text-3xl text-[#ffb347] font-bold">13 & 14 October</div>
               <div className="text-lg text-[#d2c7a3]/70 mt-2">Two Days of Innovation</div>
             </motion.div>
 
@@ -75,8 +75,8 @@ export default function Scene6() {
             <motion.div whileHover={{ y: -10 }} className="text-center">
               <MapPin size={60} className="mx-auto mb-4 text-[#ffb347]" strokeWidth={1.5} />
               <div className="text-2xl font-bold text-[#d2c7a3] mb-2">Where</div>
-              <div className="text-3xl text-[#ffb347] font-bold">Hybrid Mode</div>
-              <div className="text-lg text-[#d2c7a3]/70 mt-2">Virtual + Physical</div>
+              <div className="text-3xl text-[#ffb347] font-bold">GD Naidu Hall & Faraday Hall</div>
+              <div className="text-lg text-[#d2c7a3]/70 mt-2">Physical</div>
             </motion.div>
 
             <div className="w-px bg-[#ffb347]/30" />
@@ -84,7 +84,7 @@ export default function Scene6() {
             <motion.div whileHover={{ y: -10 }} className="text-center">
               <Mail size={60} className="mx-auto mb-4 text-[#ffb347]" strokeWidth={1.5} />
               <div className="text-2xl font-bold text-[#d2c7a3] mb-2">Contact</div>
-              <div className="text-3xl text-[#ffb347] font-bold">ACM-W</div>
+              <div className="text-3xl text-[#ffb347] font-bold">acmw.students@srmist.edu.in</div>
               <div className="text-lg text-[#d2c7a3]/70 mt-2">Student Chapter</div>
             </motion.div>
           </motion.div>
@@ -97,22 +97,26 @@ export default function Scene6() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <motion.button
-              whileHover={{ scale: 1.1, boxShadow: '0 0 80px #ffb347' }}
-              whileTap={{ scale: 0.95 }}
-              className="group relative px-20 py-8 text-3xl font-bold text-[#0f0f0f] bg-[#ffb347] rounded-full overflow-hidden transition-all duration-300"
-              style={{ boxShadow: '0 0 40px #ffb347' }}
-            >
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-[#ff8c00] via-[#ffb347] to-[#ff8c00]"
-                animate={{ x: ['-200%', '200%'] }}
-                transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-              />
-              <span className="relative z-10 flex items-center justify-center gap-4">
-                REGISTER NOW
-                <ArrowRight size={36} className="group-hover:translate-x-3 transition-transform duration-300" />
-              </span>
-            </motion.button>
+           <motion.button
+  whileHover={{ scale: 1.1, boxShadow: '0 0 80px #4B5320' }}
+  whileTap={{ scale: 0.95 }}
+  className="group relative px-20 py-8 text-3xl font-bold text-white bg-[#1DB954] rounded-full overflow-hidden transition-all duration-300"
+  style={{ boxShadow: '0 0 40px #4B5320' }}
+>
+  <motion.div
+    className="absolute inset-0 bg-gradient-to-r from-[#178f43] via-[#1DB954] to-[#178f43]"
+    animate={{ x: ['-200%', '200%'] }}
+    transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+  />
+  <span className="relative z-10 flex items-center justify-center gap-4">
+    REGISTER NOW
+    <ArrowRight
+      size={36}
+      className="group-hover:translate-x-3 transition-transform duration-300"
+    />
+  </span>
+</motion.button>
+
           </motion.div>
         </motion.div>
 
