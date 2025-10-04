@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0f0f0f;
+  color: #d2c7a3;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Creepster', cursive;
+}
+
+.scene {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.vignette {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.8);
+  z-index: 50;
+}
+
+.glitch {
+  animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+
+@keyframes glitch {
+  0%, 100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+}
+
+.text-glow {
+  text-shadow: 0 0 20px currentColor, 0 0 40px currentColor;
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 179, 71, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 179, 71, 0.8), 0 0 60px rgba(255, 179, 71, 0.5);
+  }
+}
+
+.subtitle-fade {
+  animation: subtitle-fade 1s ease-in forwards;
+}
+
+@keyframes subtitle-fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rain-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 40;
+  overflow: hidden;
+}
+
+.raindrop {
+  position: absolute;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(174, 194, 224, 0.5));
+  animation: rain-fall linear infinite;
+}
+
+@keyframes rain-fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+.fog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 35;
+  background: radial-gradient(ellipse at center, transparent 0%, rgba(15, 15, 15, 0.3) 100%);
+  animation: fog-drift 20s ease-in-out infinite alternate;
+}
+
+@keyframes fog-drift {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+.flashlight {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 179, 71, 0.4) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 100;
+  mix-blend-mode: screen;
+  transition: transform 0.05s ease-out;
+  filter: blur(20px);
+}
+
+.flashlight.active {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 179, 71, 0.6) 0%, transparent 70%);
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  background: linear-gradient(to bottom, #ffb347, #b33a3a);
+  box-shadow: 0 0 10px #ffb347;
+}
+
+.xp-orb {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffb347, #d2691e);
+  box-shadow: 0 0 20px #ffb347, 0 0 40px #ffb347;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.firefly {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ffb347;
+  box-shadow: 0 0 10px #ffb347;
+  animation: firefly-float 5s ease-in-out infinite;
+}
+
+@keyframes firefly-float {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translate(100px, -50px);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(200px, -100px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translate(150px, -75px);
+    opacity: 1;
+  }
+}
+
+.lightning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 45;
+}
+
+.lightning.flash {
+  animation: lightning-flash 0.2s ease-in-out;
+}
+
+@keyframes lightning-flash {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+
+.bloom {
+  filter: blur(1px) brightness(1.1) contrast(1.1);
+}
