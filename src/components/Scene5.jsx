@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Award, Zap, Wrench, Users, Skull, Crown, Star } from 'lucide-react';
+import { Zap, Wrench, Users, Skull, Crown, Star, Medal, Shield } from 'lucide-react';
 
 const awards = [
   {
@@ -39,15 +39,22 @@ const honors = [
     name: 'The Last of Us',
     subtitle: 'Grand Champion',
     description: 'Ultimate survivor. The one who rebuilt the world from ashes.',
-    icon: Crown,
-    color: '#ffb347',
+    icon: Crown, 
+    color: '#ffb347', 
   },
   {
-    name: 'Zone Masters',
-    subtitle: 'Best in Each Domain',
-    description: 'Elite teams who dominated their survival zones.',
-    icon: Award,
-    color: '#d2c7a3',
+    name: 'Firefly Vanguard',
+    subtitle: '1st Runner-Up',
+    description: 'Led the resistance with valor. Came close to reshaping the new world.',
+    icon: Medal, 
+    color: '#c0c0c0', 
+  },
+  {
+    name: 'Hunter Elite',
+    subtitle: '2nd Runner-Up',
+    description: 'Tactical and relentless. Survived against all odds in the infected zones.',
+    icon: Shield, 
+    color: '#cd7f32', 
   }
 ];
 

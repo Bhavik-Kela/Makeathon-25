@@ -27,7 +27,7 @@ export default function Scene6() {
                 boxShadow: '0 0 60px #ffb347'
               }}
             >
-              <div className="text-9xl">🔥</div>
+              <div className="text-9xl">🧟‍♂️</div>
             </div>
           </motion.div>
 
@@ -66,7 +66,7 @@ export default function Scene6() {
             <motion.div whileHover={{ y: -10 }} className="text-center">
               <Calendar size={60} className="mx-auto mb-4 text-[#ffb347]" strokeWidth={1.5} />
               <div className="text-2xl font-bold text-[#d2c7a3] mb-2">When</div>
-              <div className="text-3xl text-[#ffb347] font-bold">13 & 14 October</div>
+              <div className="text-3xl text-[#ffb347] font-bold">21st & 22nd October</div>
               <div className="text-lg text-[#d2c7a3]/70 mt-2">Two Days of Innovation</div>
             </motion.div>
 
@@ -75,7 +75,7 @@ export default function Scene6() {
             <motion.div whileHover={{ y: -10 }} className="text-center">
               <MapPin size={60} className="mx-auto mb-4 text-[#ffb347]" strokeWidth={1.5} />
               <div className="text-2xl font-bold text-[#d2c7a3] mb-2">Where</div>
-              <div className="text-3xl text-[#ffb347] font-bold">GD Naidu Hall & Faraday Hall</div>
+              <div className="text-3xl text-[#ffb347] font-bold">Faraday Hall</div>
               <div className="text-lg text-[#d2c7a3]/70 mt-2">Physical</div>
             </motion.div>
 
