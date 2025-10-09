@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Helmet } from "react-helmet";
 import FlashlightCursor from './components/FlashlightCursor';
 import RainEffect from './components/RainEffect';
 import LightningEffect from './components/LightningEffect';
@@ -8,7 +9,6 @@ import Scene3 from './components/Scene3';
 import Scene4 from './components/Scene4';
 import Scene5 from './components/Scene5';
 import Scene6 from './components/Scene6';
-
 
 function App() {
   useEffect(() => {
@@ -20,7 +20,6 @@ function App() {
         const speed = 0.5;
         const yPos = -(scrolled * speed);
 
-        // JS version: remove TypeScript syntax
         if (element instanceof HTMLElement) {
           element.style.transform = `translateY(${yPos}px)`;
         }
@@ -42,13 +41,25 @@ function App() {
 
   return (
     <div className="relative">
+      {/* ✅ Google Analytics tag */}
+      <Helmet>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-TYS3M28QRM"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-TYS3M28QRM');
+          `}
+        </script>
+      </Helmet>
+
+      {/* Your existing components */}
       <FlashlightCursor />
       <RainEffect />
       <LightningEffect />
-
       <div className="vignette" />
       <div className="fog-overlay" />
-
       <Scene1 />
       <Scene2 />
       <Scene3 />
