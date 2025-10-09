@@ -108,6 +108,12 @@ export default function Scene6() {
     animate={{ x: ['-200%', '200%'] }}
     transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
   />
+ <a
+  href="https://unstop.com/p/make-a-thon-2025-srm-institute-of-science-and-technology-kattankulathur-chennai-1571910"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group"
+>
   <span className="relative z-10 flex items-center justify-center gap-4">
     REGISTER NOW
     <ArrowRight
@@ -115,6 +121,8 @@ export default function Scene6() {
       className="group-hover:translate-x-2 sm:group-hover:translate-x-3 transition-transform duration-300"
     />
   </span>
+</a>
+
 </motion.button>
 
           </motion.div>
