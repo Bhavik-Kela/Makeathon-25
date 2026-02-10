@@ -200,7 +200,7 @@ export default function Scene6() {
             </motion.div>
 
             <div className="pt-12 border-t border-[#ffb347]/20 max-w-2xl mx-auto">
-              <p className="text-[#d2c7a3]/50 text-base">© MAKEATHON 2025 | All Rights Reserved</p>
+              <p className="text-[#d2c7a3]/50 text-base">© MAKEATHON 2026 | All Rights Reserved</p>
             </div>
           </div>
         </motion.div>
