@@ -75,7 +75,7 @@ export default function Scene6() {
             <motion.div whileHover={{ y: -10 }} className="text-center">
               <MapPin size={60} className="mx-auto mb-4 text-[#ffb347]" strokeWidth={1.5} />
               <div className="text-2xl font-bold text-[#d2c7a3] mb-2">Where</div>
-              <div className="text-3xl text-[#ffb347] font-bold">Faraday Hall</div>
+              <div className="text-3xl text-[#ffb347] font-bold">TechPark-2</div>
               <div className="text-lg text-[#d2c7a3]/70 mt-2">Physical</div>
             </motion.div>
 
@@ -185,7 +185,7 @@ export default function Scene6() {
           <div className="space-y-8">
             <div>
               <h3 className="text-5xl font-bold text-[#ffb347] mb-4 text-glow">
-                MAKEATHON 2025
+                MAKEATHON 2026
               </h3>
               <p className="text-2xl text-[#d2c7a3]">Presented by ACM-W Student Chapter</p>
             </div>

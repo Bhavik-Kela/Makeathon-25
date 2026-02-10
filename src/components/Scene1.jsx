@@ -34,7 +34,7 @@ export default function Scene1() {
           transition={{ duration: 1.5, ease: 'easeOut' }}
         >
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-[#ffb347] glitch text-glow mb-4 sm:mb-6 md:mb-8">
-            MAKEATHON 2025
+            MAKEATHON 2026
           </h1>
         </motion.div>
 
