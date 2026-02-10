@@ -4,60 +4,133 @@ import { Clock, Users, Lightbulb, Target, Trophy, Bug } from 'lucide-react';
 const timelineEvents = [
   {
     day: 'Day 1',
-    time: '9:00 AM',
+    time: '9:00 AM – 9:30 AM',
     title: 'Opening Ceremony',
-    description: 'Welcome to the apocalypse. Rules revealed, teams assembled.',
+    description:
+      'Welcome address, inauguration, and briefing on rules & judging criteria.',
     icon: Users,
   },
   {
     day: 'Day 1',
-    time: '10:00 AM - 6:00 PM',
-    title: 'Prototype Development',
-    description: 'Build, innovate, and survive. Create your solution from the ruins.',
+    time: '9:30 AM – 9:45 AM',
+    title: 'Problem Statement Explanation',
+    description:
+      'Detailed explanation of problem statements with doubt clearing.',
     icon: Lightbulb,
   },
   {
     day: 'Day 1',
-    time: '6:00 PM - 7:00 PM',
-    title: 'First Review',
-    description: 'Present your progress. Mentors evaluate survival potential.',
+    time: '9:45 AM – 11:30 AM',
+    title: 'Ideation & Initial Prototype',
+    description:
+      'Brainstorming, wireframing, and mentor interactions to shape ideas.',
+    icon: Lightbulb,
+  },
+  {
+    day: 'Day 1',
+    time: '11:30 AM – 12:30 PM',
+    title: 'Review – 1',
+    description:
+      'Judges and mentors evaluate feasibility and innovation.',
     icon: Target,
   },
   {
     day: 'Day 1',
-    time: '8:00 PM',
-    title: 'Shortlisting Announcement',
-    description: 'The strongest teams advance. Others fall to the horde.',
-    icon: Trophy,
+    time: '12:30 PM – 1:30 PM',
+    title: 'Lunch Break',
+    description:
+      'Refuel and recharge before the next development phase.',
+    icon: Users,
   },
   {
-    day: 'Day 2',
-    time: '9:00 AM - 12:00 PM',
-    title: 'Final Development',
-    description: 'Shortlisted teams refine their weapons against extinction.',
+    day: 'Day 1',
+    time: '1:30 PM – 2:45 PM',
+    title: 'Prototype Development – Level 1',
+    description:
+      'Building core features and strengthening the solution.',
     icon: Lightbulb,
   },
   {
+    day: 'Day 1',
+    time: '2:45 PM – 3:05 PM',
+    title: 'Mentimeter Quiz',
+    description:
+      'Innovation & tech-themed rapid quiz round.',
+    icon: Target,
+  },
+  {
+    day: 'Day 1',
+    time: '3:05 PM – 3:45 PM',
+    title: 'Review – 2',
+    description:
+      'Working prototype check and shortlisting basis.',
+    icon: Bug,
+  },
+  {
+    day: 'Day 1',
+    time: '3:45 PM – 4:00 PM',
+    title: 'Shortlisting Announcement',
+    description:
+      'Selected teams advance. Instructions for Day 2 announced.',
+    icon: Trophy,
+  },
+
+  {
     day: 'Day 2',
-    time: '12:00 PM - 2:00 PM',
-    title: 'Judging Round',
-    description: 'Face the council. Defend your innovation under scrutiny.',
+    time: '9:00 AM – 9:15 AM',
+    title: 'Reporting & Setup',
+    description:
+      'Shortlisted teams report and prepare their setup.',
     icon: Users,
   },
   {
     day: 'Day 2',
-    time: '2:00 PM - 4:00 PM',
-    title: 'Debugging & Polish',
-    description: 'Final chance to fortify. Eliminate weaknesses.',
+    time: '9:15 AM – 11:30 AM',
+    title: 'Final Development Phase',
+    description:
+      'Refine features and finalize the solution.',
+    icon: Lightbulb,
+  },
+  {
+    day: 'Day 2',
+    time: '11:30 AM – 12:30 PM',
+    title: 'Final Review',
+    description:
+      'Judges provide final guidance before presentations.',
+    icon: Target,
+  },
+  {
+    day: 'Day 2',
+    time: '12:30 PM – 1:30 PM',
+    title: 'Lunch Break',
+    description:
+      'Final pause before testing and presentations.',
+    icon: Users,
+  },
+  {
+    day: 'Day 2',
+    time: '1:30 PM – 2:30 PM',
+    title: 'Final Testing & Debugging',
+    description:
+      'Eliminate bugs and strengthen stability.',
     icon: Bug,
   },
   {
     day: 'Day 2',
-    time: '5:00 PM',
-    title: 'Winner Announcement',
-    description: 'Humanity\'s champion emerges. Glory awaits the victor.',
+    time: '2:30 PM – 3:30 PM',
+    title: 'Final Presentation & Judging',
+    description:
+      'Defend your innovation before the judges.',
+    icon: Users,
+  },
+  {
+    day: 'Day 2',
+    time: '3:30 PM – 4:15 PM',
+    title: 'Winner Announcement & Closing Ceremony',
+    description:
+      'Judges’ feedback, prize distribution, certificates, and vote of thanks.',
     icon: Trophy,
-  }
+  },
 ];
 
 export default function Scene4() {

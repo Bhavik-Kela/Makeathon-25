@@ -66,7 +66,7 @@ export default function Scene6() {
             <motion.div whileHover={{ y: -10 }} className="text-center">
               <Calendar size={60} className="mx-auto mb-4 text-[#ffb347]" strokeWidth={1.5} />
               <div className="text-2xl font-bold text-[#d2c7a3] mb-2">When</div>
-              <div className="text-3xl text-[#ffb347] font-bold">22nd & 23rd October</div>
+              <div className="text-3xl text-[#ffb347] font-bold">9th & 10th March</div>
               <div className="text-lg text-[#d2c7a3]/70 mt-2">Two Days of Innovation</div>
             </motion.div>
 
